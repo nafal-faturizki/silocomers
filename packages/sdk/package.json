@@ -7,7 +7,16 @@
     "build": "echo 'build sdk (placeholder)'",
     "test": "echo 'test sdk (placeholder)'"
   },
+  "scripts": {
+    "build": "echo 'build sdk (placeholder)'",
+    "test": "echo 'test sdk (placeholder)'",
+    "generate:schema": "ts-node ./scripts/generate-schemas.ts",
+    "seed:dev": "ts-node ./scripts/seed-dev.ts"
+  },
   "devDependencies": {
-    "zod": "^4.0.0"
+    "zod": "^4.0.0",
+    "ulid": "^2.0.0",
+    "zod-to-json-schema": "^4.0.0",
+    "ts-node": "^10.0.0"
   }
 }

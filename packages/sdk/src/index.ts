@@ -14,3 +14,5 @@ export const exampleProduct = (): Product => ({
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),
 })
+
+export { saveProduct, getProduct } from './storage'

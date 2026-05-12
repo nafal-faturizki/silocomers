@@ -164,6 +164,13 @@ pnpm setup:dev
 - [ ] `pnpm test:local` menjalankan semua test tanpa internet
 - [ ] Docker Compose untuk dependensi eksternal (jika ada)
 - [x] `.env.example` lengkap dengan komentar penjelasan
+**Checklist:**
+- [x] `pnpm dev` menjalankan seed lokal dan placeholder dev (`pnpm run seed` + placeholder)
+- [ ] Hot reload aktif untuk Workers + frontend
+- [x] Seed script dengan data realistis (seller, produk, buyer dummy) — `packages/sdk/scripts/seed-dev.ts`
+- [ ] `pnpm test:local` menjalankan semua test tanpa internet
+- [ ] Docker Compose untuk dependensi eksternal (jika ada)
+- [x] `.env.example` lengkap dengan komentar penjelasan
 
 ---
 
@@ -196,10 +203,9 @@ export type Product = z.infer<typeof ProductSchema>
 
 **Checklist:**
 **Checklist:**
-- [x] Zod schema untuk entitas utama — `Product` schema ditambahkan di `packages/sdk`
-- [ ] Zod schema untuk Seller, Buyer, Order, Shipment (pending)
-- [ ] ULID sebagai ID strategy (sortable, URL-safe, collision-resistant)
-- [ ] JSON Schema export untuk API documentation
+- [x] Zod schema untuk entitas utama — `Product`, `Seller`, `Buyer`, `Order`, `Shipment` ditambahkan di `packages/sdk`
+- [x] ULID sebagai ID strategy (sortable, URL-safe, collision-resistant) — helper `generateId()` ditambahkan
+- [x] JSON Schema export untuk API documentation — generator skrip ditambahkan di `packages/sdk/scripts/generate-schemas.ts`
 - [ ] Type generation otomatis untuk frontend dan Workers
 - [ ] Migration strategy untuk schema evolution
 - [ ] OpenAPI 3.1 spec dari schema (Hono + Zod OpenAPI)

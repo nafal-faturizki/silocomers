@@ -9,7 +9,8 @@
   "scripts": {
     "prepare": "husky install",
     "setup:dev": "pnpm install && cp .env.example .env.local || true && echo 'Setup complete'",
-    "dev": "echo 'Start development (placeholder)'",
+    "seed": "pnpm --filter @silocomers/sdk run generate:schema && pnpm --filter @silocomers/sdk run seed:dev",
+    "dev": "pnpm run seed && echo 'Start development (placeholder)'",
     "build": "echo 'Build workspace (placeholder)'",
     "lint": "eslint . --ext .ts,.js",
     "test": "echo 'Run tests (placeholder)'"
