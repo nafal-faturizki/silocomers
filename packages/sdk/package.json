@@ -1,0 +1,13 @@
+{
+  "name": "@silocomers/sdk",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "echo 'build sdk (placeholder)'",
+    "test": "echo 'test sdk (placeholder)'"
+  },
+  "devDependencies": {
+    "zod": "^4.0.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@silocomers/web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'dev web (placeholder)'",
+    "build": "echo 'build web (placeholder)'",
+    "start": "echo 'start web (placeholder)'"
+  }
+}

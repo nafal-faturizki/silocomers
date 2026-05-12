@@ -1,0 +1,23 @@
+{
+  "name": "silocomers",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "setup:dev": "pnpm install && cp .env.example .env.local || true && echo 'Setup complete'",
+    "dev": "echo 'Start development (placeholder)'",
+    "build": "echo 'Build workspace (placeholder)'",
+    "lint": "eslint . --ext .ts,.js",
+    "test": "echo 'Run tests (placeholder)'"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@commitlint/cli": "^17.0.0",
+    "eslint": "^8.0.0"
+  }
+}

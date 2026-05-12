@@ -85,11 +85,14 @@ marketplace/
 ```
 
 **Checklist:**
-- [ ] `pnpm` workspaces + `turbo.json` pipeline (build → test → lint)
-- [ ] Root `tsconfig.json` dengan path aliases (`@marketplace/*`)
-- [ ] `ESLint` + `Prettier` + `commitlint` (Conventional Commits)
-- [ ] `Husky` pre-commit hooks (lint + type-check)
-- [ ] `.editorconfig` konsisten lintas OS
+- [x] `pnpm` workspaces (pnpm-workspace.yaml created)
+- [ ] `turbo.json` pipeline (not implemented yet)
+- [x] Root `tsconfig.json` dengan path aliases (`@marketplace/*`)
+- [x] `ESLint` (basic `.eslintrc.json` added)
+- [x] `Prettier` (basic `.prettierrc` added)
+- [x] `commitlint` (Conventional Commits) — `commitlint.config.cjs` added
+- [x] `Husky` pre-commit hooks (lint + type-check) — basic hooks added
+- [x] `.editorconfig` konsisten lintas OS
 
 ---
 
@@ -121,7 +124,8 @@ Pipeline:
 ```
 
 **Checklist:**
-- [ ] GitHub Actions pipeline (PR check + staging + production)
+**Checklist:**
+- [x] GitHub Actions pipeline (PR check + staging + production) — minimal CI added
 - [ ] Wrangler CLI terintegasi di pipeline
 - [ ] Cloudflare Pages auto-preview per PR
 - [ ] Secret management via GitHub Secrets + Wrangler Secrets
@@ -153,12 +157,13 @@ pnpm setup:dev
 - **D1 local** — SQLite edge database lokal
 
 **Checklist:**
+**Checklist:**
 - [ ] `pnpm dev` menjalankan semua services sekaligus
 - [ ] Hot reload aktif untuk Workers + frontend
 - [ ] Seed script dengan data realistis (seller, produk, buyer dummy)
 - [ ] `pnpm test:local` menjalankan semua test tanpa internet
 - [ ] Docker Compose untuk dependensi eksternal (jika ada)
-- [ ] `.env.example` lengkap dengan komentar penjelasan
+- [x] `.env.example` lengkap dengan komentar penjelasan
 
 ---
 
@@ -190,7 +195,9 @@ export type Product = z.infer<typeof ProductSchema>
 ```
 
 **Checklist:**
-- [ ] Zod schema untuk semua entitas utama (Product, Seller, Buyer, Order, Shipment)
+**Checklist:**
+- [x] Zod schema untuk entitas utama — `Product` schema ditambahkan di `packages/sdk`
+- [ ] Zod schema untuk Seller, Buyer, Order, Shipment (pending)
 - [ ] ULID sebagai ID strategy (sortable, URL-safe, collision-resistant)
 - [ ] JSON Schema export untuk API documentation
 - [ ] Type generation otomatis untuk frontend dan Workers
